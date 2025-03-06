@@ -6,68 +6,36 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 49px auto;
+  margin: 50px auto;
   z-index: 1;
   max-width: 1200px;
   padding: 0 5%;
 }
 
+/* Button */
 .button {
+  display: flex;
   justify-content: center;
   text-align: center;
-  margin-left: 30px;
   border: none;
+  margin-left: 30px;
 }
 
-/* Responsive for Mobile */
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column-reverse;
-    text-align: center;
-    margin-top: 30px;
-    padding: 20px;
-  }
-
-  .content {
-    align-items: center;
-  }
-
-  .title {
-    font-size: 40px;
-    white-space: normal;
-    border-right: none;
-  }
-
-  .description {
-    font-size: 18px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .contactBtn {
-    margin-left: 0;
-    font-size: 20px;
-    padding: 12px 18px;
-  }
-
-  .heroImg {
-    width: 90%;
-  }
-}
-
-/* Content */
+/* Content Section */
 .content {
+  padding: 5%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   text-align: left;
   color: var(--color-text);
   z-index: 1;
+  max-width: 100%;
 }
 
 /* Typing Effect */
 .title {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 900;
   margin-bottom: 20px;
   font-family: var(--font-roboto);
@@ -92,32 +60,11 @@
 
 /* Description */
 .description {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.6;
   max-width: 600px;
   color: var(--color-text-secondary);
   text-align: left;
-}
-
-@media screen and (max-width: 480px) {
-  .title {
-    font-size: 36px;
-  }
-
-  .description {
-    font-size: 16px;
-    text-align: center;
-  }
-
-  .contactBtn {
-    font-size: 18px;
-    padding: 10px 16px;
-  }
-
-  .toggleBtn {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
 }
 
 /* Buttons */
@@ -127,11 +74,11 @@
   background-color: var(--color-primary);
   color: var(--color-text);
   border-radius: 100px;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
-  padding: 24px 24px 24px 24px;
+  padding: 12px 20px;
   transition: all 0.3s ease-in-out;
-  margin: 10px 10px 10px 0;
+  margin: 50px;
   z-index: 1;
 }
 
@@ -154,35 +101,98 @@
   100% { transform: translateY(0); }
 }
 
+/* 📱 Responsive Design */
 @media screen and (max-width: 1060px) {
   .contactBtn {
-    flex-direction: column;
-    align-items: center;
-    font-size: 20px;
-    padding: 16px 20px;
+    font-size: 16px;
+    padding: 10px 18px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .contactBtn {
+  .container {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin: 30px;
+    padding: 20px;
+  }
+
+  .content {
+    padding: 5%;
+    margin: 30px auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 40px;
+    white-space: normal;
+    border-right: none;
+  }
+
+  .description {
     font-size: 18px;
-    padding: 14px 18px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .contactBtn {
+    font-size: 16px;
+    padding: 10px 16px;
+    margin: 10px auto;
+  }
+
+  .heroImg {
+    width: 90%;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .contactBtn {
+  .title {
+    font-size: 30px;
+  }
+
+  .description {
     font-size: 16px;
-    padding: 12px 16px;
-    justify-content: center;
+    text-align: center;
+  }
+
+  .contactBtn {
+    font-size: 14px;
+    padding: 10px 14px;
+    width: max-content;
+    margin: 10px auto;
   }
 }
 
-@media screen and (max-width: 380px) {
-  .contactBtn {
+@media screen and (max-width: 400px) {
+  .content {
+    padding: 5%;
+    margin: 20px auto; /* Ensure it centers properly */
+    max-width: 90%; /* Prevents it from stretching too much */
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    text-align: center;
+  }
+  
+  
+  .title {
+    font-size: 26px;
+  }
+
+  .description {
     font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .heroImg {
+    max-width: 80%;
+  }
+  
+  .buttons {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
   }
 }
