@@ -1,0 +1,125 @@
+@import "../../vars.css";
+
+/* Navbar Styles */
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  z-index: 2;
+  margin: 0 10%;
+}
+
+/* Title Styling */
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color 0.3s ease-in-out;
+}
+
+.title:hover {
+  color: var(--color-primary); /* Change color on hover */
+}
+
+/* Menu Button */
+.menuBtn {
+  display: none;
+  width: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menuBtn:hover {
+  transform: rotate(90deg);
+}
+
+/* Menu Styling */
+.menu {
+  display: flex;
+}
+
+.menuItems {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.menuItems a {
+  font-size: 20px;
+  color: var(--color-text);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.menuItems a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  left: 50%;
+  bottom: -5px;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.menuItems a:hover {
+  color: var(--color-primary);
+}
+
+.menuItems a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 830px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    position: absolute;
+    right: 0;
+    margin-right: 10%;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 11px;
+    z-index: 3;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+
+  .menuItems {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    border-radius: 10px;
+    background: rgba(25, 55, 109, 0.9);
+    padding: 24px 33px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .menuOpen {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+@media screen and (max-width: 512px) {
+  .title{
+    font-size: 25px;
+    flex-direction: column;
+  }
+}

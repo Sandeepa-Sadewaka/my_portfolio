@@ -1,0 +1,50 @@
+[
+  {
+    "title": "HTML",
+    "imageSrc": "assets/skills/html.png"
+  },
+  {
+    "title": "CSS",
+    "imageSrc": "assets/skills/css.png"
+  },
+  {
+    "title": "React",
+    "imageSrc": "assets/skills/react.png"
+  },
+  {
+    "title": "Node",
+    "imageSrc": "assets/skills/node.png"
+  },
+  {
+    "title": "Figma",
+    "imageSrc": "assets/skills/figma.png"
+  },
+  {
+    "title": "Java",
+    "imageSrc": "assets/skills/java.png"
+  },
+  {
+    "title": "JavaScript",
+    "imageSrc": "assets/skills/javaScript.png"
+  },
+  {
+    "title": "Dart",
+    "imageSrc": "assets/skills/dart.png"
+  },
+  {
+    "title": "Flutter",
+    "imageSrc": "assets/skills/flutter.png"
+  },
+  {
+    "title": "Python",
+    "imageSrc": "assets/skills/python.png"
+  },
+  {
+    "title": "C",
+    "imageSrc": "assets/skills/c.png"
+  },
+  {
+    "title": "My SQL",
+    "imageSrc": "assets/skills/mySql.png"
+  }
+]

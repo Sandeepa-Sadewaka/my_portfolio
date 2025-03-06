@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Furniture Shopping App",
+    "imageSrc": "assets/projects/project1.png",
+    "description": "A mobile application for browsing and purchasing furniture with a user-friendly UI and seamless checkout experience.",
+    "skills": ["Flutter", "Dart", "Stripe Payment", "Node.js"],
+    "source": "https://github.com/Sandeepa-Sadewaka/furniture_mobile_app"
+  },
+  {
+    "title": "Organ Donation Platform",
+    "imageSrc": "assets/projects/project2.png",
+    "description": "An integrated platform for organ donation, connecting donors, recipients, and medical professionals securely.",
+    "skills": ["Flutter", "Dart", "Firebase"],
+    "source": "https://github.com/Sandeepa-Sadewaka/Sathkara-the_organ_donation_app"
+  }
+
+]
+
