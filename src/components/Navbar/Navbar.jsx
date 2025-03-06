@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
-import { getImageUrl } from "../../utils";
-import.meta.url 
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,6 +10,7 @@ export const Navbar = () => {
         Welcome to my Portfolio
       </a>
       <div className={styles.menu}>
+        {/* Menu Icon */}
         <img
           className={styles.menuBtn}
           src={
@@ -21,23 +20,21 @@ export const Navbar = () => {
           }
           alt="menu-button"
           onClick={() => setMenuOpen(!menuOpen)}
+          style={{
+            transform: menuOpen ? "rotate(90deg)" : "rotate(0deg)",
+            transition: "transform 0.3s ease-in-out",
+          }}
         />
+        
+        {/* Menu Items */}
         <ul
           className={`${styles.menuItems} ${menuOpen ? styles.menuOpen : ""}`}
           onClick={() => setMenuOpen(false)}
         >
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#experience">Skills</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>

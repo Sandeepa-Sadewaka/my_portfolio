@@ -8,6 +8,7 @@
   justify-content: space-between;
   padding: 15px 10%;
   z-index: 10;
+  flex-wrap: wrap;
 }
 
 /* Title Styling */
@@ -20,25 +21,23 @@
 }
 
 .title:hover {
-  color: var(--color-primary); /* Change color on hover */
+  color: var(--color-primary);
 }
 
 /* Menu Button (Hamburger) */
 .menuBtn {
-  display: none;
+  display: block;
   width: 40px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-}
-
-.menuBtn:hover {
-  transform: rotate(90deg);
 }
 
 /* Menu Styling */
 .menu {
   display: flex;
   align-items: center;
+  gap: 30px;
+  justify-content: center; /* Center menu on large screens */
 }
 
 .menuItems {
@@ -75,33 +74,12 @@
   left: 0;
 }
 
-
-/* 🔹 Mini Display (Very Small Screens) */
-@media screen and (max-width: 512px) {
-  .title {
-    font-size: 25px;
-  }
-
-  .menu {
-    width: 90%;
-    align-items: center;
-  }
-
-  .menuItems a {
-    font-size: 18px;
-  }
-
-  .menuBtn {
-    width: 35px;
-  }
-}
-
-
-/* Responsive Styles */
+/* 🔹 Mobile Menu (Hidden by Default) */
 @media screen and (max-width: 830px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
   }
 
   .menu {
@@ -112,6 +90,7 @@
     align-items: flex-end;
     gap: 11px;
     z-index: 3;
+    width: 100%;
   }
 
   .menuBtn {
@@ -130,6 +109,8 @@
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 20px;
   }
 
   .menuOpen {
@@ -137,11 +118,30 @@
     opacity: 1;
     transform: translateY(0);
   }
-  
 }
+
+/* 🔹 Small Screens (Below 512px) */
 @media screen and (max-width: 512px) {
-  .title{
+  .title {
     font-size: 25px;
-    flex-direction: column;
+  }
+
+  .menu {
+    width: 50%;
+    justify-content: space-between; /* Adjust space between items */
+    padding: 10px;
+  }
+
+  .menuItems a {
+    font-size: 18px;
+  }
+
+  .menuBtn {
+    width: 35px;
+  }
+
+  .menuItems {
+    padding: 15px;
+    background-color: rgba(25, 55, 109, 0.9); /* Slightly darker */
   }
 }
