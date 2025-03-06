@@ -36,7 +36,8 @@
 }
 
 .container:hover .title {
-  color: var(--color-primary);
+  color: black;
+  font-weight: bold;
 }
 
 .description {
@@ -48,7 +49,7 @@
 }
 
 .container:hover .description {
-  color: var(--color-primary);
+  color: black;
 }
 
 .skills {
