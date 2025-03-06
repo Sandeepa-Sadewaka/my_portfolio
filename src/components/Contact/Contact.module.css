@@ -8,6 +8,7 @@
   animation: fadeIn 1s ease-out forwards;
 }
 
+/* Text Section */
 .text {
   margin-bottom: 30px;
 }
@@ -23,10 +24,13 @@
   font-weight: 300;
 }
 
+/* Links */
 .links {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  flex-wrap: wrap;  /* Makes sure links wrap properly on small screens */
+  gap: 30px; /* Reduced gap for better alignment */
+  margin-top: 20px;
 }
 
 .link {
@@ -53,6 +57,7 @@
   transition: transform 0.2s ease;
 }
 
+/* Fade-in Animation */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -61,5 +66,62 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* 🔹 RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 30px 5%;
+    border-radius: 30px;
+  }
+
+  .text h2 {
+    font-size: 36px;
+  }
+
+  .text p {
+    font-size: 18px;
+  }
+
+  .links {
+    gap: 20px;
+  }
+
+  .link {
+    font-size: 18px;
+  }
+
+  .link img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 20px 5%;
+    border-radius: 20px;
+  }
+
+  .text h2 {
+    font-size: 28px;
+  }
+
+  .text p {
+    font-size: 16px;
+  }
+
+  .links {
+    gap: 15px;
+  }
+
+  .link {
+    font-size: 16px;
+  }
+
+  .link img {
+    width: 20px;
+    height: 20px;
   }
 }

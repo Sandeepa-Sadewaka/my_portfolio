@@ -6,9 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 20px;
-  z-index: 2;
-  margin: 0 10%;
+  padding: 15px 10%;
+  z-index: 10;
 }
 
 /* Title Styling */
@@ -24,7 +23,7 @@
   color: var(--color-primary); /* Change color on hover */
 }
 
-/* Menu Button */
+/* Menu Button (Hamburger) */
 .menuBtn {
   display: none;
   width: 40px;
@@ -39,6 +38,7 @@
 /* Menu Styling */
 .menu {
   display: flex;
+  align-items: center;
 }
 
 .menuItems {
@@ -74,6 +74,28 @@
   width: 100%;
   left: 0;
 }
+
+
+/* 🔹 Mini Display (Very Small Screens) */
+@media screen and (max-width: 512px) {
+  .title {
+    font-size: 25px;
+  }
+
+  .menu {
+    width: 90%;
+    align-items: center;
+  }
+
+  .menuItems a {
+    font-size: 18px;
+  }
+
+  .menuBtn {
+    width: 35px;
+  }
+}
+
 
 /* Responsive Styles */
 @media screen and (max-width: 830px) {
