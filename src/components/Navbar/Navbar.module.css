@@ -26,7 +26,7 @@
 
 /* Menu Button (Hamburger) */
 .menuBtn {
-  display: block;
+  display: none;
   width: 40px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
